@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use("Agg")
 import cv2
 import matplotlib.pyplot as plt
 import copy
@@ -41,4 +43,5 @@ canvas = util.draw_handpose(canvas, all_hand_peaks)
 
 plt.imshow(canvas[:, :, [2, 1, 0]])
 plt.axis('off')
-plt.show()
+plt.savefig('demo.png')
+
